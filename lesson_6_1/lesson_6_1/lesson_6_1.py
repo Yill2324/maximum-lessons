@@ -2,23 +2,23 @@ import random
 
 
 
-class Tank: 
+class Mag: 
     def __init__(self, name, armor, min_damage, max_damage, hp):
         self.name = name
         self.armor = armor
         self.min_damage = min_damage
         self.max_damage = max_damage
-        self.hp = hp 
+        self.hp = hp    
 
     def run(self):
-        print(self.name + "   выдвигается...")
+        print(self.name + "   выходит...")
 
 
 
 
     def down_health(self, damage):
         if self.hp <= 0:
-            print("{} уничтожен".format(self.name))
+            print("{} был расщеплен на молекулы!".format(self.name))
         else:
             self.hp = self.hp - damage
             print("У {} осталось {} очков здоровья".format(self.name, self.hp))
@@ -34,7 +34,7 @@ class Tank:
 
     def fire(self, enemy):
         damage = random.randint(self.min_damage, self.max_damage)
-        print("Стреляет по {}".format(self.name, enemy.name))
+        print("Запускает снаряд в {}".format(self.name, enemy.name))
         enemy.down_health(damage)
 
 
@@ -42,7 +42,7 @@ class Tank:
 
 
     def __str__(self):
-        return "{} имеет броню в {} мм, урон в диапозоне очков {}-{} и {} hp".format(
+        return "{} имеет магическую броню в {} едениц, магический урон в диапозоне очков {}-{} и {} hp".format(
         self.name,
         self.armor,
         self.min_damage,
@@ -52,23 +52,21 @@ class Tank:
  
     
 
-tank1 = Tank("T-34", random, 15, 60, 300)
+mag1 = Mag("Вася", random, 15, 60, 110)
+
+mag2 = Mag("Рома", random, 20, 80, 100)
 
 
-tank2 = Tank("Tiger", random, 20, 80, 450)
+print(mag1)
 
+mag2.run()
 
-print(tank1)
-
-tank2.run()
-
-
-tank1.fire(tank2)
+mag1.fire(mag2)
 
 
 
-for bullet in range(20):
-    tank1.fire(tank2)
+for bullet in range(7):
+    mag1.fire(mag2)
 
 
 
