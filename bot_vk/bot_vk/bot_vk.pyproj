@@ -2,16 +2,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>47531950-aa72-447c-99cb-e79cd80e078a</ProjectGuid>
-    <ProjectHome>
-    </ProjectHome>
+    <ProjectGuid>9a19db08-8893-4b97-b5ff-1be5de3ea8d9</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
     <StartupFile>bot_vk.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>bot_vk</Name>
-    <RootNamespace>PythonApplication1</RootNamespace>
+    <RootNamespace>bot_vk</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,14 +21,14 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="valute.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="json.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="bot_vk.py" />
+    <Compile Include="memes.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="keyboard.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="valute.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
