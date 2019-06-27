@@ -28,6 +28,9 @@
     <Compile Include="keyboard.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="aniktod.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="valute.py">
       <SubType>Code</SubType>
     </Compile>
